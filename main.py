@@ -1,10 +1,10 @@
-import argparse
 import os
 import time
+import argparse
 from random import choice
-from environs import Env
 
 import telegram
+from environs import Env
 
 
 def parse_arguments():

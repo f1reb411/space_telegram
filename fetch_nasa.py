@@ -3,9 +3,9 @@ import requests
 from urllib.parse import urlparse
 from datetime import datetime
 from pathlib import Path
-from environs import Env
 
 from main import parse_arguments
+from environs import Env
 
 
 def format_url(url):

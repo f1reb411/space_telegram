@@ -1,6 +1,8 @@
-import requests
-from main import parse_arguments
 from pathlib import Path
+
+import requests
+
+from main import parse_arguments
 
 
 def fetch_spacex_last_launch():
