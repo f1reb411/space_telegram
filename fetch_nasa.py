@@ -14,7 +14,7 @@ def cut_extension(url):
     return filename_extension[-1]
 
 
-def fetch_apod_nasa(api_key, count=10):
+def fetch_apod_nasa_urls(api_key, count=10):
     image_urls = []
     while len(image_urls) < count:
         response = requests.get(
@@ -28,7 +28,7 @@ def fetch_apod_nasa(api_key, count=10):
     return image_urls[:count]
 
 
-def fetch_epic_nasa(api_key):
+def fetch_epic_nasa_urls(api_key):
     image_urls = []
     response = requests.get(
         "https://api.nasa.gov/EPIC/api/natural/images",
