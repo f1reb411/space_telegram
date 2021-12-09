@@ -12,7 +12,7 @@ def fetch_spacex_last_launch():
     for number, link in enumerate(links, 1):
         response = requests.get(link)
         response.raise_for_status()
-        with open('images/spacex' + str(number) + '.jpg', 'wb') as file:
+        with open(f'images/spacex{number+1}.jpg', 'wb') as file:
             file.write(response.content)
 
 
