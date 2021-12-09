@@ -8,7 +8,7 @@ from main import parse_arguments
 from environs import Env
 
 
-def format_url(url):
+def return_extension(url):
     parsed = urlparse(url)
     filename_extension = os.path.splitext(parsed.path)
     return filename_extension[-1]
@@ -50,7 +50,7 @@ def save_nasa_image(list_image_urls, api_key):
     for number, url in enumerate(list_image_urls):
         response = requests.get(url, params={'api_key': api_key})
         response.raise_for_status()
-        image_extension = format_url(url)
+        image_extension = return_extension(url)
         with open(f'images/nasa{number+1}{image_extension}', 'wb') as file:
             file.write(response.content)
 
