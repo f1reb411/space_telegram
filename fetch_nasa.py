@@ -47,10 +47,10 @@ def fetch_epic_nasa(api_key):
 
 
 def save_nasa_image(list_image_urls, api_key):
-    for number, image in enumerate(list_image_urls):
-        response = requests.get(image, params={'api_key': api_key})
+    for number, url in enumerate(list_image_urls):
+        response = requests.get(url, params={'api_key': api_key})
         response.raise_for_status()
-        image_extension = format_url(image)
+        image_extension = format_url(url)
         with open(f'images/nasa{number+1}{image_extension}', 'wb') as file:
             file.write(response.content)
 
