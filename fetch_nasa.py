@@ -67,8 +67,8 @@ if __name__ == '__main__':
     Path(image_dir).mkdir(parents=True, exist_ok=True)
 
     all_nasa_images = []
-    epic_nasa_images = fetch_epic_nasa(nasa_api_key)
+    epic_nasa_images = fetch_epic_nasa_urls(nasa_api_key)
     all_nasa_images.extend(epic_nasa_images)
-    apod_nasa_images = fetch_apod_nasa(nasa_api_key)
+    apod_nasa_images = fetch_apod_nasa_urls(nasa_api_key)
     all_nasa_images.extend(apod_nasa_images)
     save_nasa_image(all_nasa_images, nasa_api_key)

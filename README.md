@@ -30,13 +30,13 @@ pip install -r requirements.txt
 Скачайте картинки:
 
 ```
-python fetch_spacex
+python fetch_spacex.py
 ``` 
 
 и/или 
 
 ```
-python fetch_nasa
+python fetch_nasa.py
 ```
 
 Автоматически создастся папка `images`, куда будут скачены картинки.
